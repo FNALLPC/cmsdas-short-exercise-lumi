@@ -30,7 +30,7 @@ jobs:
       - name: Install GitHub Pages, Bundler, and kramdown gems
         run: |
           gem install bundler -v 2.4.22
-          gem install nokogiri -- --use-system-libraries # https://stackoverflow.com/a/79120576/13019084
+          gem install nokogiri -v 1.15.7
           gem install github-pages kramdown kramdown-parser-gfm
 
       - name: Install Python modules
