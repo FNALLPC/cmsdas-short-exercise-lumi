@@ -10,6 +10,7 @@ title: "References"
 * [`brilcalc` Quick Start](https://twiki.cern.ch/twiki/bin/viewauth/CMS/BrilcalcQuickStart)
 
 ### Articles
+* [Shiny new luminosity and beam conditions instrumentation for CMS](https://cms.cern/news/shiny-new-luminosity-and-beam-conditions-instrumentation-cms) (2025) (A.Delannoy)
 * [The Installation of the BRIL Luminometers: Preparing for a bright Run 3](https://cms.cern/news/installation-bril-luminometers-preparing-bright-run-3) (2021) (A.Delannoy)
 * [Illuminating! Counting LHC Collisions with CMS](https://cms.cern/news/illuminating-counting-lhc-collisions-cms) (2021) (G.Krintiras)
 * [Why precision luminosity measurements matter](https://home.cern/news/news/physics/why-precision-luminosity-measurements-matter) (2021) (P.Traczyk)
@@ -20,6 +21,7 @@ title: "References"
 * [Luminosity measurement in proton-proton collisions at 13.6 TeV in 2022 at CMS](https://cds.cern.ch/record/2890833/) (2024) (CMS Collaboration)
 * [Precision luminosity measurement in proton-proton collisions at s√= 13 TeV in 2015 and 2016 at CMS](https://arxiv.org/pdf/2104.01927) (2021) (CMS Collaboration)
 * [Luminosity Determination At Proton Colliders](http://dx.doi.org/10.1016/j.ppnp.2014.11.002) (2015) (P.Grafstrom, W.Kozanecki)
+* [Determination of the Absolute Luminosity at the LHC](https://repository.cern/records/bb1pm-28231) (2010) (S.M.White thesis)
 * [Concept of luminosity](https://cds.cern.ch/record/941318/files/p361.pdf) (2006) (W.Herr, B.Muratori)
 * [Luminosity considerations for the LHC](https://cds.cern.ch/record/260711/files/P00022101.pdf) (1994) (K.Eggert, K.Honkavaara, A.Morsch)
 * [Calibration of the effective beam height in the ISR](http://cdsweb.cern.ch/record/296752/files/196800064.pdf) (1968) (S.van der Meer)
