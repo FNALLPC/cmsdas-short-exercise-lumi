@@ -160,3 +160,8 @@ But the [official documentation](https://cmslumi.web.cern.ch/#brilcalc) is much 
 > Using brilcalc, determine the *fill* that run 381151 corresponds to and query the luminosity for that fill.
 > What is the total recorded luminosity for this fill in inverse picobarns?
 {: .challenge}
+<!--
+/poll "What is the total recorded luminosity for this fill (in inverse picobarns) for the fill corresponding to run 381151?" "307" "646" "710"
+fill=$(brilcalc beam -r 381151 --output-style csv | tail -1 | cut -f 1 -d ,)
+brilcalc lumi -f "${fill}" -u /pb --output-style csv | tail -1 | cut -d, -f6
+-->
