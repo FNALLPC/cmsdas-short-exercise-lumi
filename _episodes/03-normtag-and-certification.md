@@ -71,4 +71,4 @@ One of the main deliverables of this process are JSON files listing runs and lum
 
 The plot below shows the cumulative curves for the luminosity delivered by LHC (azure), recorded by CMS (orange) and certified as good for physics analysis during stable beams (light orange). The luminosity validated for physics analysis corresponds to data recorded with all detectors and reconstructed physics objects showing good performance.
 
-![Cumulative delivered, recorded, and certified luminosity](https://twiki.cern.ch/twiki/pub/CMSPublic/DataQuality/2025_call1to24_Golden_acc_integrated_luminosity_per_day.png){width: 60%}
+![Cumulative delivered, recorded, and certified luminosity](https://twiki.cern.ch/twiki/pub/CMSPublic/DataQuality/2025_call1to24_Golden_acc_integrated_luminosity_per_day.png){:width="60%"}
