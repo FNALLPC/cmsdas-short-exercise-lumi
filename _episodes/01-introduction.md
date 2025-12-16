@@ -170,8 +170,7 @@ $$ n_{1} $$ and $$ n_{2} $$ are the numbers of particles in each of the two bunc
 and $$ \Sigma_{x} $$ and $$ \Sigma_{y} $$ correspond to the effective beam overlap widths in each scan plane.
 Thus, absolute luminosity can be determined from the *geometrical overlap of the two beams (i.e. "luminous region")*.
 
-![Luminosity scan (separated)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate_1.png){:width="30%"}
-![Luminosity scan (head on)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate_2.png){:width="30%"}
+![Luminosity scan (separated)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate.png){:width="60%"}
 
 ![Rate vs separation](https://brildpg.web.cern.ch/public/lum-22-001/Figure_002-a.png){:width="40%"}
 
