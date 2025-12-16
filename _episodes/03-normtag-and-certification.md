@@ -16,7 +16,7 @@ keypoints:
 > ## Important
 > **This exercise is meant to be run from lxplus.cern.ch.**
 >
-> Please follow the [setup instructions](/setup.html) before getting started.
+> Please follow the [setup instructions](/cmsdas-short-exercise-lumi/setup.html) before getting started.
 {: .prereq}
 
 # Normtags
@@ -39,15 +39,21 @@ It covers all periods for which there is a final approved number for physics (wh
 The preliminary normtag is **`/cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json`**.
 It contains the best-available preliminary calibrations and can be used for cases when an approved number is not available yet (i.e. for 2023-2024).
 
-> ## 3.1 Query fill 8333 using the physics normtag
+> ## 3.1 Query fill 10000 using the physics normtag
 >
-> Using the physics normtag, what is the recorded luminosity in picobarns for fill 8333?
+> Using the physics normtag, what is the recorded luminosity in picobarns for fill 10000?
 {: .challenge}
+<!--
+brilcalc lumi -f 10000 -u /pb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_PHYSICS.json
+-->
 
-> ## 3.2 Query fill 9666 using the BRIL normtag
+> ## 3.2 Query fill 11110 using the BRIL normtag
 >
-> Using the BRIL normtag, what is the recorded luminosity in picobarns for fill 9666?
+> Using the BRIL normtag, what is the recorded luminosity in picobarns for fill 11110?
 {: .challenge}
+<!--
+brilcalc lumi -f 11110 -u /pb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json
+-->
 
 # Data Certification
 
@@ -59,5 +65,10 @@ It contains the best-available preliminary calibrations and can be used for case
 
 Data collected by CMS is *certified* on a luminosity-section basis to determine the subset of *data of good quality to be included in physics analyses*.
 Data certification is carried out by taking into account both the operational health of the sub-detectors and scrutiny of the reconstructed physics objects by DPG and POG experts.
+Data are defined as good for physics analysis if all subdetectors, triggers, and physics objects (tracking, electron, muon, gamma, jet, and MET) show the expected performance.
 The outcome of the certification process is regularly updated as more data gets collected, and for each new version of the data processing, by the [DQM-DataCertification](https://twiki.cern.ch/twiki/bin/view/CMS/DQM).
 One of the main deliverables of this process are JSON files listing runs and lumisection which are good for physics analysis.
+
+The plot below shows the cumulative curves for the luminosity delivered by LHC (azure), recorded by CMS (orange) and certified as good for physics analysis during stable beams (light orange). The luminosity validated for physics analysis corresponds to data recorded with all detectors and reconstructed physics objects showing good performance.
+
+![Cumulative delivered, recorded, and certified luminosity](https://twiki.cern.ch/twiki/pub/CMSPublic/DataQuality/2025_call1to24_Golden_acc_integrated_luminosity_per_day.png){width: 60%}
