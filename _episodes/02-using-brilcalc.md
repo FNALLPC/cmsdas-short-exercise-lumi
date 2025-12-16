@@ -13,7 +13,7 @@ keypoints:
 > ## Important
 > **This exercise is meant to be run from lxplus.cern.ch.**
 >
-> Please follow the [setup instructions](/setup.html) before getting started.
+> Please follow the [setup instructions](/cmsdas-short-exercise-lumi/setup.html) before getting started.
 {: .prereq}
 
 # brilcalc
@@ -28,34 +28,31 @@ This lesson will focus on the `brilcalc lumi` subcommand, which can query the de
 Let's try a few examples:
 
 > ## Glossary
-> If you are unfamiliar with "fills", "runs", "lumisections", etc., you can find their definitions in the [Glossary](/reference.html#glossary)
+> If you are unfamiliar with "fills", "runs", "lumisections", etc., you can find their definitions in the [Glossary](/cmsdas-short-exercise-lumi/reference.html#glossary)
 {: .callout}
 
-> ## Run brilcalc for [fill 9666](https://cmsoms.cern.ch/cms/fills/report?cms_fill=9666)
+> ## Run brilcalc for [fill 10666](https://cmsoms.cern.ch/cms/fills/report?cms_fill=10666)
 > ```bash
-> brilcalc lumi -f 9666
+> brilcalc lumi -f 10666
 > ```
 > {: .source}
 > > ## Output
 > > ```
-> > #Data tag : 24v1 , Norm tag: onlineresult
-> > +-------------+-------------------+-----+------+---------------------+---------------------+
-> > | run:fill    | time              | nls | ncms | delivered(/ub)      | recorded(/ub)       |
-> > +-------------+-------------------+-----+------+---------------------+---------------------+
-> > | 381143:9666 | 05/24/24 11:04:03 | 12  | 0    | 14.181185411        | 0                   |
-> > | 381147:9666 | 05/24/24 11:08:23 | 231 | 223  | 91256126.248753428  | 77027107.891959071  |
-> > | 381148:9666 | 05/24/24 12:38:03 | 292 | 283  | 144805628.612147063 | 127957935.748760328 |
-> > | 381149:9666 | 05/24/24 14:31:14 | 140 | 133  | 69235351.710984617  | 61366554.087962441  |
-> > | 381150:9666 | 05/24/24 15:25:36 | 51  | 41   | 24489229.453756947  | 18476291.350573931  |
-> > | 381151:9666 | 05/24/24 15:45:17 | 860 | 852  | 324855104.257013619 | 307000908.806938708 |
-> > | 381152:9666 | 05/24/24 21:19:14 | 194 | 194  | 55802570.516791143  | 54069059.298041537  |
-> > +-------------+-------------------+-----+------+---------------------+---------------------+
+> > #Data tag : 24v2 , Norm tag: onlineresult
+> > +--------------+-------------------+------+------+---------------------+---------------------+
+> > | run:fill     | time              | nls  | ncms | delivered(/ub)      | recorded(/ub)       |
+> > +--------------+-------------------+------+------+---------------------+---------------------+
+> > | 392538:10666 | 05/25/25 12:13:34 | 595  | 586  | 264365847.218701780 | 247877075.633063853 |
+> > | 392540:10666 | 05/25/25 16:04:20 | 28   | 18   | 13756312.142429797  | 5966128.696881626   |
+> > | 392541:10666 | 05/25/25 16:14:54 | 14   | 7    | 6795693.079543251   | 1514552.601936024   |
+> > | 392542:10666 | 05/25/25 16:20:06 | 1902 | 1902 | 711711390.989558220 | 683596996.380376101 |
+> > +--------------+-------------------+------+------+---------------------+---------------------+
 > > #Summary:
 > > +-------+------+------+------+---------------------+---------------------+
 > > | nfill | nrun | nls  | ncms | totdelivered(/ub)   | totrecorded(/ub)    |
 > > +-------+------+------+------+---------------------+---------------------+
-> > | 1     | 7    | 1780 | 1726 | 710444024.980632067 | 645897857.184236050 |
-> > +-------+------+------+------+---------------------+---------------------+ 
+> > | 1     | 4    | 2539 | 2513 | 996629243.430233002 | 938954753.312257528 |
+> > +-------+------+------+------+---------------------+---------------------+
 > > ```
 > > {: .output}
 > {: .solution}
@@ -107,23 +104,19 @@ But the [official documentation](https://cmslumi.web.cern.ch/#brilcalc) is much 
 > Filters
 > : conditions to query
 > 
-> * `-b <beam status>` ["STABLE BEAMS", "FLAT TOP", "ADJUST", "SQUEEZE"]
-> * `--amodetag <machine mode>` ["PROTPHYS", "IONPHYS", "PAPHYS"]
+> * `-b <beam status>`
+>     * `["STABLE BEAMS", "FLAT TOP", "ADJUST", "SQUEEZE"]`
+> * `--amodetag <machine mode>`
+>     * `["PROTPHYS", "IONPHYS", "PAPHYS"]`
 > * `--beamenergy <beam energy>` (in GeV)
 > 
 > Output/Display
 > : output file, table/csv/html output format, utc/local time, etc.
 > 
 > * `-o <output file>` (csv format)
-> * `--output-style <output format>` ["tab", "csv", "html"] (ignored if `-o` is provided)
-> * `-n <scalefactor>` (scale output by 1/scalefactor)
-> * `--cerntime` (display times in CERN local time)
+> * `--output-style <output format>` (ignored if `-o` is provided)
+>     * `["tab", "csv", "html"]`
 > * `--tssec` (display times as UNIX timestamps)
-> 
-> Database connection
-> : connect to a database, such as a web cache
->
-> * `-c <connection>` ["offline", "online", "onlinew", "dev"]
 {: .callout}
 
 > ## Example `brilcalc lumi` options
@@ -132,12 +125,12 @@ But the [official documentation](https://cmslumi.web.cern.ch/#brilcalc) is much 
 >
 > `-u <unit>`
 > : Show luminosity in the specified unit and scale the output value accordingly 
-> : ["/kb", "/b", "/mb", "/ub", "/nb", "/pb", "/fb", "/ab"]
-> : ["1e21/cm2", "1e24/cm2", "1e27/cm2", "1e30/cm2", "1e33/cm2", "1e36/cm2", "1e39/cm2", "1e42/cm2"]
+> : `["/kb", "/b", "/mb", "/ub", "/nb", "/pb", "/fb", "/ab"]`
+> : `["1e21/cm2", "1e24/cm2", "1e27/cm2", "1e30/cm2", "1e33/cm2", "1e36/cm2", "1e39/cm2", "1e42/cm2"]`
 > 
 > `--type <luminometer>`
 > : Show results from the selected luminometer
-> : ["hfoc", "hfet", "bcm1f", "bcm1fsi", "bcm1futca", "pltzero", "pltslink", "dt", "pxl", "ramses", "radmon"]
+> : `["hfoc", "hfet", "bcm1f", "bcm1fsi", "bcm1futca", "pltzero", "pltslink", "dt", "pxl", "ramses", "radmon"]`
 {: .callout}
 
 
@@ -163,7 +156,7 @@ But the [official documentation](https://cmslumi.web.cern.ch/#brilcalc) is much 
 {: .challenge}
 
 
-> ## 2.1 Query luminosity info for fill corresponding to run 370000
-> Using brilcalc, determine the fill that run 370000 corresponds to.
+> ## 2.1 Query luminosity info for *fill* corresponding to run 381151
+> Using brilcalc, determine the *fill* that run 381151 corresponds to and query the luminosity for that fill.
 > What is the total recorded luminosity for this fill in inverse picobarns?
 {: .challenge}
