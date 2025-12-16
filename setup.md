@@ -22,9 +22,9 @@ Specifying `pip`'s `--user` flag will install `brilws` binaries to `"${HOME}/.lo
 {: .source}
 ```
 Collecting brilws
-  Using cached brilws-3.8.2-py3-none-any.whl
+  Using cached brilws-3.9.4-py3-none-any.whl
 Installing collected packages: brilws
-Successfully installed brilws-3.8.2
+Successfully installed brilws-3.9.4
 ```
 {: .output}
 
@@ -63,7 +63,7 @@ brilcalc --version
 ```
 {: .source}
 ```
-3.8.2
+3.9.4
 ```
 {: .output}
 
@@ -89,7 +89,6 @@ brilcalc --version
 > On `lxplus`, a container image is provided to give a simple access to the `brilcalc` software for all users.
 > It should work without issues (in some cases, it will print warnings regarding the use of outdated python functions which can be ignored).
 > In case of problems or inconsistent results, `brilcalc` should be set up as described above.
-> Feedback about the container image is welcome, and can be sent to the LUM POG conveners (<cms-pog-conveners-lum@cern.ch>).
 > ```bash
 > source /cvmfs/cms-bril.cern.ch/cms-lumi-pog/brilws-docker/brilws-env
 > ```
