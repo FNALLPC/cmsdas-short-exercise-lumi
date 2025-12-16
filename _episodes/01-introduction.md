@@ -95,7 +95,7 @@ The uncertainty in the integrated luminosity is often the dominant systematic un
 We can emphasize the impact of the integrated luminosity uncertainty by considering a relatively rare process:
 
 > ## 1.3 Total Higgs bosons decaying to muon pairs at CMS
-> * During 2024, CMS recorded around $$ \approx 115 \mathrm{fb^{-1}} $$ of good-quality data with 1.6% uncertainty (see [Luminosity recommendations for Run 3 analyses](https://twiki.cern.ch/twiki/bin/view/CMS/LumiRecommendationsRun3#2024))
+> * During 2024, CMS recorded around $$ \approx 115 \mathrm{fb^{-1}} $$ of data with 1.6% uncertainty (see [Luminosity recommendations for Run 3 analyses](https://twiki.cern.ch/twiki/bin/view/CMS/LumiRecommendationsRun3#2024))
 > * The total production cross section of Standard Model Higgs boson at $$ \sqrt{s} = 13.6 \mathrm{TeV} $$ is nearly $$ \approx 60 \mathrm{pb} $$ ([see Table 11.2 in the 2024 PDG](https://pdg.lbl.gov/2024/reviews/rpp2024-rev-higgs-boson.pdf))
 > * The branching ratio for $$ H \rightarrow \mu \mu $$ is nearly $$ \approx 2 \times 10^{-4} $$ ([see Table 11.3 in the 2024 PDG](https://pdg.lbl.gov/2024/reviews/rpp2024-rev-higgs-boson.pdf))
 >
@@ -154,8 +154,10 @@ Hadronic Forward (HF)
 
 The precise determination of integrated luminosity is particularly challenging at hadron colliders, in part due to the theoretical predictions being generally less precise compared to $$ e^{+} e^{−} $$ colliders (e.g. uncertainties in the parton distribution functions and precision of parton-level cross-section calculations).
 A sub-detector can easily measure "relative" luminosity on an arbitrary scale based on the measured event rate.
-The complexity lies in the determination of "absolute" luminosity, which involes re-scaling the measured event rate by a proportionality factor, $$ \sigma_{vis} $$, derived from the properties of the colliding beams.
-This scaling factor may be thought of as a way to account for the sub-detector's particular acceptance and response.
+The complexity lies in the determination of "absolute" luminosity, which involes re-scaling the measured event rate by a proportionality factor, $$ \sigma_{vis} $$.
+<!--, derived from the properties of the colliding beams.
+This "visbible cross-section" reflects the sub-detector's acceptance, efficiency, etc.
+-->
 
 At the LHC, the primary technique to determine the absolute luminosity scale is the van der Meer (vdM) scan method, based on dedicated beam-separation scans.
 The size and shape of the interaction region is measured by recording the relative interaction rates as a function of the transverse beam separation.
@@ -166,9 +168,10 @@ $$ \sigma_{vis} = \mu_{vis}^{\mathrm{max}} \frac{2 \pi \Sigma_{x} \Sigma_{y}}{n_
 where $$ \mu_{vis}^{\mathrm{max}} $$ is the peak visible interaction rate per bunch,
 $$ n_{1} $$ and $$ n_{2} $$ are the numbers of particles in each of the two bunches,
 and $$ \Sigma_{x} $$ and $$ \Sigma_{y} $$ correspond to the effective beam overlap widths in each scan plane.
-Thus, luminosity can be determined from the *number of particles per bunch* and the *geometrical overlap of the two beams (luminous region)*.
+Thus, absolute luminosity can be determined from the *geometrical overlap of the two beams (i.e. "luminous region")*.
 
-![Luminosity scan](https://atlas.cern/sites/default/files/2023-01/countingcollisions.png){:width="60%"}
+![Luminosity scan (separated)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate_1.png){:width="30%"}
+![Luminosity scan (head on)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate_2.png){:width="30%"}
 
 ![Rate vs separation](https://brildpg.web.cern.ch/public/lum-22-001/Figure_002-a.png){:width="40%"}
 
@@ -178,7 +181,7 @@ Several systematic effects can affect the measurement of $$ \sigma_{vis} $$.
 These represent a major contribution to the final uncertainty in the measurement of integrated luminosity.
 
 Orbit drift & beam position corrections
-: Time-dependent changes of the transverse beam positions (orbit drift) that affect the beam separation are monitored with the DOROS beam positions monitors (BPM)
+: Time-dependent changes of the transverse beam positions (orbit drift) that affect the beam separation are monitored with the DOROS beam positions monitors
 : After considering nominal beam positions, linear orbit drift corrections, and predicted beam-beam deflection, residual deviations are applied as corrections to the beam positions
 
 Length scale calibration
@@ -187,7 +190,7 @@ Length scale calibration
 
 Beam-beam effects
 : The electromagnetic interaction between proton bunches changes their transverse position (beam-beam deflection) and their density distribution (dynamic-β effect)
-: The effect of beam-beam deflection is calculated analitically from the Bassetti–Erskine formula and the dynamic-β effect is parametrized using numerical simulations
+: The effect of beam-beam deflection is calculated analitically from the *Bassetti–Erskine formula* and the dynamic-β effect is parametrized using numerical simulations
 
 Factorization bias
 : The estimation of the luminous area from an $$x-y$$ scan pair assumes that the transverse proton bunch densities can be expressed as uncorrelated functions in $$x$$ and $$y$$
@@ -212,7 +215,7 @@ Out-of-time pileup corrections
 : Corrections for contributions due to spill-over of electronic signals (type-I) and exponentially decaying afterglow due to activation of detector material (type-II)
 
 Stability and linearity
-: Gradual efficiency loss for each luminometer (mainly due to radiation damage) is monitored and corrected for based on the analysis of emittance scans (fast luminosity separation scans run often under physics production conditions) and by comparing the consistency between multiple luminometers
+: Gradual efficiency loss for each luminometer (mainly due to radiation damage) is monitored and corrected based on the analysis of emittance scans (fast luminosity separation scans run periodically under nominal physics conditions) and by comparing the consistency between multiple luminometers
 : The consistency of detector response as a function of pileup is compared between several luminometers to estimate the non-linearity of each luminometer
 
 {% include links.md %}
