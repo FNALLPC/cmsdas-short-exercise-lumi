@@ -44,6 +44,7 @@ It contains the best-available preliminary calibrations and can be used for case
 > Using the physics normtag, what is the recorded luminosity in picobarns for fill 10000?
 {: .challenge}
 <!--
+/poll "3.1 Using the physics normtag, what is the recorded luminosity in picobarns for fill 10000?" "280" "262" "260"
 brilcalc lumi -f 10000 -u /pb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_PHYSICS.json
 -->
 
@@ -52,6 +53,7 @@ brilcalc lumi -f 10000 -u /pb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Nor
 > Using the BRIL normtag, what is the recorded luminosity in picobarns for fill 11110?
 {: .challenge}
 <!--
+/poll "3.2 Using the BRIL normtag, what is the recorded luminosity in picobarns for fill 11110?" "417" "463" "466"
 brilcalc lumi -f 11110 -u /pb --normtag /cvmfs/cms-bril.cern.ch/cms-lumi-pog/Normtags/normtag_BRIL.json
 -->
 
