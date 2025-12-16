@@ -159,18 +159,19 @@ The complexity lies in the determination of "absolute" luminosity, which involes
 This "visbible cross-section" reflects the sub-detector's acceptance, efficiency, etc.
 -->
 
-At the LHC, the primary technique to determine the absolute luminosity scale is the van der Meer (vdM) scan method, based on dedicated beam-separation scans.
+At the LHC, the primary technique to determine the absolute luminosity scale is the van der Meer (vdM) scan method, based on dedicated beam-separation scans (as illustrated below).
 The size and shape of the interaction region is measured by recording the relative interaction rates as a function of the transverse beam separation.
+
+![Luminosity scan (left: separated, right: head on)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate.png){:width="60%"}
+
 After adopting several assumptions (e.g. transverse and longitudinal beam densities are Gaussian, density functions are factorizable into $$x$$- and $$y$$-dependent components, etc.), the visible cross-section can be expressed as
 
 $$ \sigma_{vis} = \mu_{vis}^{\mathrm{max}} \frac{2 \pi \Sigma_{x} \Sigma_{y}}{n_{1} n_{2}} $$
 
 where $$ \mu_{vis}^{\mathrm{max}} $$ is the peak visible interaction rate per bunch,
 $$ n_{1} $$ and $$ n_{2} $$ are the numbers of particles in each of the two bunches,
-and $$ \Sigma_{x} $$ and $$ \Sigma_{y} $$ correspond to the effective beam overlap widths in each scan plane.
+and $$ \Sigma_{x} $$ and $$ \Sigma_{y} $$ correspond to the effective beam overlap widths in each scan plane (extracted from Gaussian fits, as shown in the rate vs beam separation plot below).
 Thus, absolute luminosity can be determined from the *geometrical overlap of the two beams (i.e. "luminous region")*.
-
-![Luminosity scan (separated)](https://brildpg.web.cern.ch/public/vdm_scan_beam_separation_vs_rate.png){:width="60%"}
 
 ![Rate vs separation](https://brildpg.web.cern.ch/public/lum-22-001/Figure_002-a.png){:width="40%"}
 
